@@ -1,16 +1,18 @@
-print("***************************************************")
-print("Welcome to this game!!!!")
 
-playing = input("Do you want to play? ")
- 
-if playing != "yes":
-    quit()
+questions = ["what does CPU stands for", "What does GPU stands for?", "What does RAM stands for?"]
+answers = ["central processing unit", "graphical processing unit", "random access memmory"]
+score = 0
+for x in range(0, len(questions)):
+          
+          answer = ""
 
-print("cool!!! lets play ")
+          while True:
+               answer = input(questions[x] + " ") 
+               to_lower = answer.lower()
+               if to_lower ==answers[x]: 
+                    print("correct!!")
+                    score +=1;
+                    print("score", score)
+                    break
 
-answer = input("What does CPU stands for? ")
-if answer == "central processing unit" :
-    print("correct!!")
-
-else:
-    print("incorrect!")
+            
